@@ -1,0 +1,53 @@
+/* reset css */
+* {
+    box-sizing: border-box;
+}
+
+body{
+    margin:0;
+    padding:0;
+}
+
+/* font  */
+.font-large {
+    font-size: 50px;
+}
+
+
+/* color */
+.text-color {
+    color: rgb(244, 150, 101);
+}
+
+.hello-content {
+    color: red;
+}
+
+div {
+    color: green;
+    font-size: 25px;
+}
+
+#link {
+    font-size: 25px;
+}
+
+.link-border {
+    /* border: 1px solid black; */
+    color: brown;
+}
+
+.text-color .strong-text {
+    color: blueviolet;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.content {
+    width: 300px;
+    height: 300px;
+    /* margin:12px 3px 6px 9px; */
+    /* margin: 10px; */
+    padding: 50px;
+    background-color: yellow;
+}

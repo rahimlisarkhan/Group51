@@ -1,0 +1,104 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(240, 240, 240);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* header */
+header {
+    height: 100px;
+    padding: 20px;
+    background: rgb(219, 219, 219);
+}
+
+header h1 {
+    float: right;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+
+.logo-img {
+    width: 50px;
+    height: 50px;
+    float: left;
+}
+
+.logo-content {
+    float: left;
+}
+
+.navbar {
+    float: right;
+    margin-top: 20px;
+}
+
+.navbar li {
+    display: inline;
+    padding: 5px;
+}
+
+.navbar a {
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    color: #ff4747
+}
+
+/* Main */
+main {
+    height: 100vh;
+}
+
+/* Section About */
+
+#about {
+    margin-top: 50px;
+    padding: 20px;
+    height: 500px;
+}
+
+.about-info {
+    float: left;
+    width: 40%;
+}
+
+.about-info h2 {
+    margin-bottom: 20px;
+    line-height: 1.4;
+    font-size: 50px;
+    font-weight: bold;
+
+}
+
+.about-info p {
+    line-height: 1.4;
+    font-size: 20px;
+}
+
+.about-img {
+    float: right;
+}
+
+.about-img img {
+    width: 500px;
+}
+
+
+
+
+/* Footer */
+footer {
+    background: rgb(44, 44, 44);
+    height: 300px;
+}
