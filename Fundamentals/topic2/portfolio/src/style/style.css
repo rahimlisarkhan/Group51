@@ -56,9 +56,7 @@ header h1 {
 }
 
 /* Main */
-main {
-    height: 100vh;
-}
+
 
 /* Section About */
 
@@ -96,9 +94,9 @@ main {
 
 
 
-
 /* Footer */
 footer {
     background: rgb(44, 44, 44);
     height: 300px;
+    clear: both;
 }

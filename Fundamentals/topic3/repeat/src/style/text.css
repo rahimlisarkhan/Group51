@@ -1,0 +1,8 @@
+p{
+    height:100px;
+    overflow-y: scroll;
+    background:red;
+    cursor: col-resize;
+    text-transform: capitalize;
+    /* text-shadow:  5px 5px 1px black; */
+}
