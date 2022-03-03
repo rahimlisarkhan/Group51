@@ -1,0 +1,9 @@
+:root{
+    /* colors */
+    --colorMainGreen:#71A894;
+    --colorMainBlack:#303031;
+    /* Fonts */
+    --logoFont:'Fredoka', sans-serif;
+    /* Font size     */
+    --largeFontSize:32px
+}

@@ -1,0 +1,8 @@
+/* General */
+@import url("reset.css");
+@import url("font.css");
+@import url("variable.css");
+
+/* Pages */
+@import url("home.css");
+@import url("about.css");
