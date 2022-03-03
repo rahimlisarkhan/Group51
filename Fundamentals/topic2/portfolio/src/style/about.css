@@ -1,0 +1,39 @@
+.about-content {
+    width: 80%;
+    margin-top: 100px;
+    display: flex;
+}
+
+.about-content-info {
+    flex: 1;
+}
+
+.about-content-image {
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about-content-image > img {
+    width:80%;
+    height:80%;
+    border-radius: 8px 8px 4px 4px;
+}
+
+
+
+.about-content h1 {
+    font-size: 55px;
+    letter-spacing: 5px;
+    color: rgb(37, 37, 37);
+    text-align: center;
+}
+
+.about-content p {
+    font-size: 25px;
+    line-height: 1.4;
+    margin: 15px 0;
+
+    color: rgb(37, 37, 37);
+}

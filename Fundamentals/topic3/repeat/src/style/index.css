@@ -12,6 +12,8 @@ body{
     /* background-size:cover; */
     padding:50px;
     height:700px;
+    position: fixed;
+    top: 0;
 }
 
 

@@ -9,21 +9,27 @@
     font-size:50px;
     font-weight:bold;
     letter-spacing: 10px;
+    margin-top:90px;
     text-transform: capitalize;
 }
 
 .port-content{
     margin-top:40px;
     padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .port-card{
     width: 250px;
     height:350px;
     box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.493);
-    float: left;
-    margin:15px;
+    /* float: left; */
+    margin:30px;
     position: relative;
+    /* display: flex; */
+    /* flex-direction: column-reverse; */
 }
 
 .port-card-img{
@@ -38,6 +44,8 @@
 }
 
 .port-card-info{
+    /* display:flex; */
+    /* flex-direction:column-reverse; */
     padding: 20px;
 }
 
@@ -46,9 +54,11 @@
     font-weight: bold;
     letter-spacing:1px;
     margin-bottom:10px;
+    text-align: center;
 }
 
 .port-card-info p {
+    text-align: center;
 
     color:rgb(83, 83, 83);
     line-height: 1.2;
@@ -71,4 +81,11 @@
     background-color:rgb(0, 0, 0);
     opacity: 0.3;
 
+}
+
+.qutu{
+    width: 50%;
+    height: 500px;
+    margin: 0 auto;
+    background-color:red;
 }
