@@ -1,0 +1,61 @@
+/* Phone - 320px - 600px | max-480 --  */
+/* Tablet - max-768 */
+/* Laptop max-992 */
+/* Desktop min - 1200 */
+/* Big Desktop min-1800 */
+
+
+
+
+@media screen and (min-width:1800px) and (max-width:2500px) {
+
+    .responsive-box {
+        background-color: black;
+    }
+
+}
+
+
+
+
+@media screen and (max-width:1200px) {
+
+    .responsive-box {
+        background-color: brown;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .ham-menu {
+        display: block;
+    }
+
+}
+
+
+@media screen and (max-width:768px) {
+
+    .responsive-box {
+        background-color: green;
+    }
+
+}
+
+
+@media screen and (max-width:480px) {
+    .responsive-box {
+        background-color: red;
+    }
+
+    .responsive-box h1 {
+        font-size: 50px;
+        font-weight: bold;
+    }
+
+    .logo-content h1 {
+        /* display: none; */
+        /* font-size: 10vw; */
+    }
+}

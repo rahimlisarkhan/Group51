@@ -9,6 +9,7 @@ body {
 header {
     height: 107px;
     padding: 30px;
+    /* display: none; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -29,6 +30,12 @@ header {
     letter-spacing: -4%;
     font-weight: 500;
     font-family: var(--logoFont);
+    transition: all .2s;
+}
+
+
+.logo-content h1:hover {
+    transform: skewX(20deg);
 }
 
 /* Nav bar */
@@ -40,7 +47,54 @@ header {
     font-size: 18px;
     letter-spacing: -2%;
     font-weight: 500;
+    position: relative;
 }
+
+.navbar li:hover .box-submenu {
+height: 300px;
+padding: 10px;
+
+}
+
+.navbar li:hover .box-submenu li {
+    /* display: block; */
+    visibility: visible;
+
+}
+
+.ham-menu{
+    background-color: transparent;
+    border:none;
+    transition: all .2s;
+    cursor: pointer;
+    display: none;
+}
+
+.ham-menu:hover{
+    transform: scale(.95);
+}
+
+
+.box-submenu{
+    width: 200px;
+    height: 0;
+    background-color: rgb(211, 211, 211);
+    box-shadow:  0 0 2px .2 rgba(0, 0, 0, 0.527);
+    position: absolute;
+    transition: all 0.3s;
+
+}
+
+.box-submenu li{
+    /* display: none; */
+    visibility: hidden;
+}
+
+
+
+
+
+
 
 .navbar li:not(:first-child) {
     margin-left: 40px;
@@ -66,4 +120,12 @@ header {
 }
 .navbar li:last-child a {
     color:  var(--colorMainGreen)
+}
+
+
+
+
+.responsive-box{
+    height: 400px;
+    background-color:orangered
 }

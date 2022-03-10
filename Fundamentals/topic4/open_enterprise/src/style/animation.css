@@ -1,0 +1,89 @@
+.section-test {
+    padding: 40px;
+}
+
+
+
+.box {
+    width: 40px;
+    height: 40px;
+    background: red;
+    cursor: pointer;
+    /* transition-duration: 2s; */
+    /* transition-timing-function:ease-in-out; */
+    transition: all 2s;
+}
+
+.box:hover {
+    width: 300px;
+    height: 100px;
+    background: yellow;
+}
+
+.box-2{
+    width: 140px;
+    height: 140px;
+    background: green;
+    transition:all .4s;
+    cursor: pointer;
+
+}
+
+.box-2:hover{
+    /* transform: rotate(120deg); */
+    transform: rotateX(180deg);
+    /* transform:scaleX(1.2) */
+    /* transform: skew(20deg); */
+}
+
+
+.box-3{
+    width: 180px;
+    height: 180px;
+    background:lime;
+    margin-top: 50px;
+    border-radius:50%;
+    animation-name: onlineBox;
+    animation-duration: 2s;
+    /* animation-fill-mode: forwards; */
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    position: relative;
+}
+
+
+@keyframes onlineBox{
+
+    /* 0%{
+        background-color: lime;
+    }
+
+
+    25%{
+        color: red;
+    }
+
+
+    100%{
+        background-color:orange;
+    } */
+
+
+    from{
+        background-color: rgb(21, 255, 0);
+        left: 100px;
+        top: 10px;
+        transform:rotateX(180deg)
+        /* transform: scale(1.2); */
+    }
+
+    to{
+        background-color:orange;
+        left: 0;
+        top: 0;
+        transform:rotateX(0)
+        /* transform: scale(1); */
+
+    }
+}
+
