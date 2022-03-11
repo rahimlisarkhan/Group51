@@ -129,3 +129,39 @@ padding: 10px;
     height: 400px;
     background-color:orangered
 }
+
+
+.about-content{
+    display: flex;
+    flex-wrap: wrap;
+    padding:50px;
+    justify-content:space-between;
+}
+
+.about-content-info{
+    flex: 50%;
+}
+.about-content-image{
+    flex:50%;
+    height: 400px;
+}
+
+.about-content-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+
+}
+
+
+.about-content-info h3{
+    font-size:40px;
+    font-weight: bold;
+    margin-bottom:14px;
+}
+
+.about-content-info p{
+    font-size:18px;
+    line-height:1.4;
+    letter-spacing: 1px;
+}

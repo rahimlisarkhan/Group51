@@ -41,6 +41,19 @@
         background-color: green;
     }
 
+    .about-content {
+        flex-direction: column-reverse;
+    }
+
+
+    .about-content-info,
+    .about-content-image {
+        flex: 100%;
+    }
+
+    .about-content-image img {
+        height: 200px;
+    }
 }
 
 
