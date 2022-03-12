@@ -1,0 +1,38 @@
+.logo-img {
+    width: 124px;
+}
+
+.nav-item-hover:hover {
+    text-decoration: underline !important;
+}
+
+.info-image-content {
+    height: 600px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.info-image-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all .2s;
+}
+
+.info-image-content img:hover {
+    transform: scale(1.2);
+}
+
+
+.active {
+    font-weight: bold !important;
+}
+
+.card-hover {
+    transition: all .3s;
+    cursor: pointer;
+}
+
+.card-hover:hover {
+    transform: scale(.95)
+}
