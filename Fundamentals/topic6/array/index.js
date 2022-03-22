@@ -75,7 +75,7 @@
 //   }
 // });
 
-var arr = [10, 12, 14, 16, 25, 102, 250, 106, 20];
+// var arr = [10, 12, 14, 16, 25, 102, 250, 106, 20];
 
 // arr.splice(3, null, "sagol","hello","world");
 
@@ -120,12 +120,14 @@ var arr = [10, 12, 14, 16, 25, 102, 250, 106, 20];
 // }
 
 
-var arrPersonal = []
+// var arrPersonal = []
 
-let userName = prompt("Name?")
+// let userName = prompt("Name?")
 
-arrPersonal = userName.split(" ")
-console.log(arrPersonal);
+// arrPersonal = userName.split(" ")
+// console.log(arrPersonal);
 // arrPersonal.push(userName);
 
 // console.log(arrPersonal);
+
+
