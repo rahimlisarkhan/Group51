@@ -1,5 +1,7 @@
 var title = document.querySelector("#bookTitle");
-var body = document.querySelector("body");
+// var body = document.querySelector("body");
+var body = document.body
+console.log(document.URL);
 // title.innerHTML = "Hey yazdim <strong>salam</strong>"
 // var a = title.innerHTML
 
