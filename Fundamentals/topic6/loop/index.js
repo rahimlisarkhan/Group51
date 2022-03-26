@@ -118,18 +118,18 @@ var arr = ["Salam", "Hola", "Hello", "Merhaba", "Sagol"];
 // }
 
 
-for(var i = 0; i < 5; i++){
+// for(var i = 0; i < 5; i++){
 
-    if(i === 2 ){
-        break
-    }
+//     if(i === 2 ){
+//         break
+//     }
 
-    for(var j = 0; j < 5; j++){
-        console.log("salam " + i + " " + j);
+//     for(var j = 0; j < 5; j++){
+//         console.log("salam " + i + " " + j);
 
-        // if(j === 2 ){
-        //     break anafor
-        // }
-    }
+//         // if(j === 2 ){
+//         //     break anafor
+//         // }
+//     }
 
-}
+// }

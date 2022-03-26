@@ -94,23 +94,173 @@
 
 // console.log(cumle);
 
+// function saitleriQaytaran(soz) {
+//   var result = [];
+//   var saitler = ["a", "e", "i", "o", "u"];
 
-function saitleriQaytaran(soz) {
-  var result = [];
-  var saitler = ["a", "e", "i", "o", "u"];
+//   for (el of saitler) {
+//     if (soz.indexOf(el) !== -1) {
+//       result.push(el);
+//     }
+//   }
 
-
-  for (el of saitler) {
-    if (soz.indexOf(el) !== -1) {
-      result.push(el);
-    }
-  }
-
-  return result.join();
-}
+//   return result.join();
+// }
 
 // var userName = "Sarkhan";
 
 // var netice = saitleriQaytaran(userName);
 
 // console.log(netice);
+
+// function sum() {
+//   return 15;
+// }
+
+// var a = sum //10
+
+// var b = a
+
+// console.log(b());
+// console.log(a());
+
+// function sum(gelenArr) {
+//   var total = 0;
+
+//   for (el of gelenArr) {
+//     total += el;
+//   }
+
+//   return total;
+// }
+
+// function multible(num, sumArr) {
+//   return num * sum(sumArr);
+// }
+
+// var result = multible(100, [2, 5, 7, 11, 20]);
+
+// function ziyaniHesablayan(satisArray) {
+//   var totalSalary = sum(satisArray);
+
+//   if (totalSalary > 100) {
+//     return "Good sales";
+//   } else if (totalSalary >= 50 && 100 >= totalSalary) {
+//     return "Normal sales";
+//   } else {
+//     return "Very bad sales";
+//   }
+// }
+
+// console.log(ziyaniHesablayan([100, 100]));
+
+// var a = ["jale", 2, 3];
+// var c = ["Tariyel", 10, 3];
+
+// // a[1] = 105
+
+// var b = a.concat(c)
+
+
+// c[1] = 15
+
+// console.log("b", b);
+// console.log("a", a);
+// console.log("b", b);
+
+// var b = []
+
+// for (el of a) {
+//   console.log(el);
+//   b = [...b, el]
+// }
+
+
+
+// function test(a, b, d, e, ...c) {
+
+//   console.log(a, b, d, e, c);
+//   // var total = 0
+
+//   // for (el of arguments) {
+//   //   total += el
+//   // }
+
+//   // return total
+
+// }
+
+
+// test(5, 4, 3, 100, 102, 105)
+
+
+// (
+//   function sayHello() {
+//     console.log("Salam");
+//   }
+
+// )()
+
+
+// total(5)(4)(2)
+
+
+// function total(a) {
+
+//   return function (b) {
+//     return a + b
+//   }
+
+// }
+
+
+// let netice = total(5)(7)
+
+// console.log(netice);
+
+
+
+
+
+// console.log(a);
+
+
+
+// function maxEded(...arr) {
+
+//   var num = 0
+
+//   for (el of arr) {
+
+//     if (num < el) {
+//       num = el
+//     }
+//   }
+
+//   return num
+// }
+
+
+// let a = maxEded(1,2,20)
+
+// var students = ["Jale", "Ayten", "Lamiya", "Rovshana"]
+// let a = Math.max(2, 1, 45, 25)
+// var a = Math.min(...reqemler)
+// var a = Math.ceil(5.9)
+// var a = Math.floor(5.9)
+// var a = Math.round(5.9)
+// var a = Math.random() * students.length
+
+// var c = Math.floor(a)
+
+// console.log(students[c]);
+
+
+// var tarix = new Date()
+
+// var istediyimTarix = tarix.getTime()
+// tarix.setFullYear(2019)
+// tarix.setMonth(5)
+// tarix.setDate(tarix.getDate() + 100)
+
+console.log(tarix);
