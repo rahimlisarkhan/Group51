@@ -60,7 +60,7 @@ function renderTable() {
   console.log(infoData);
   tableRow.innerHTML = "";
 
-  for (i in infoData) {
+  for (i in infoData.reverse()) {
     // console.log("Xos geldin", infoData[i]);
 
     var tr = document.createElement("tr");
