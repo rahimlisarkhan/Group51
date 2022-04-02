@@ -30,6 +30,7 @@ var bankAccount = {
       alert("Pulunuz catmir");
       return;
     }
+
     var pul = parseInt(prompt("Zehmet vasiti daxil edin"));
 
     if (pul <= this.money) {
