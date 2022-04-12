@@ -1,14 +1,23 @@
 "use strict";
 
-var a;
-a = 5;
+// var a;
+// a = 5;
 
-// var person = {
-//   name: "John",
-//   age: 45,
-//   // job: "Developer",
-// };
+// console.log(a);
 
+var person = {
+  name: "John",
+  age: 45,
+  // job: "Developer",
+};
+
+// Object.prototype.hasTariyel = function(){
+//     console.log("This object");
+// }
+
+// console.log(Object.prototype);
+
+// person.hasTariyel()
 // var { name: fullName, age, job = "Issiz" } = person;
 
 // console.log(fullName);
@@ -51,6 +60,13 @@ a = 5;
 // };
 
 // var {
+//   name = "Smith",
+//   education: { university },
+// } = personal;
+
+// console.log(university);
+
+// var {
 //   education: { university: uni },
 // } = personal;
 
@@ -66,8 +82,10 @@ a = 5;
 
 // var arr = [1, 2, 4];
 
+// var [a, b, c] = [1, 2, 4];
+
+// console.log(a);
+
 // console.log(arr);
 
 // arr.salamDe()
-
-
