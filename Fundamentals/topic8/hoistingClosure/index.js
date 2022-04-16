@@ -31,20 +31,20 @@
 
 // }
 
-const makeCounter = () => {
-  var a = 0;
-  return () => {
-    return a++;
-  };
-};
+// const makeCounter = (num) => {
+//   var a = 0;
+//   return (b) => {
+//     return a++;
+//   };
+// };
 
-var tariyelinSaygaci = makeCounter();
-var ruslaninSaygaci = makeCounter();
+// var tariyelinSaygaci = makeCounter(34);
+// var ruslaninSaygaci = makeCounter(5);
 
-// console.log("tariyel",tariyelinSaygaci());
+// console.log("tariyel",tariyelinSaygaci(100));
 // console.log("tariyel",tariyelinSaygaci());
 // console.log("ruslan",ruslaninSaygaci());
-// console.log("ruslan",ruslaninSaygaci());
+// console.log("ruslan",ruslaninSaygaci(2));
 // console.log("tariyel",tariyelinSaygaci());
 // console.log("tariyel",tariyelinSaygaci());
 
@@ -66,3 +66,5 @@ var ruslaninSaygaci = makeCounter();
 
 // let { deyer } = deyerState();
 // console.log(deyer);
+
+
