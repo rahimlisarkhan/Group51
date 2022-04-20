@@ -1,8 +1,10 @@
-let moviePoster = document.querySelector("#moviePoster"),
-  movieName = document.querySelector("#movieName"),
-  movieAwards = document.querySelector("#movieAwards"),
-  movieYear = document.querySelector("#movieYear"),
-  movieRaiting = document.querySelector("#movieRaiting");
+$(document).ready(function(){
+
+let moviePoster = $("#moviePoster"),
+  movieName = $("#movieName"),
+  movieAwards = $("#movieAwards"),
+  movieYear = $("#movieYear"),
+  movieRaiting = $("#movieRaiting");
 
 // function getMovieName(title) {
 //   fetch(`http://www.omdbapi.com/?apikey=a407a7b3&t=${title}`)
@@ -31,23 +33,36 @@ async function getMovieName(title) {
   }
 }
 
-document.querySelector("#searchMovie").addEventListener("click", () => {
-  let movieTitle = document.querySelector("#movieTitle");
+$("#movieTitle").on("keydown",function(e){
 
-  getMovieName(movieTitle.value);
+  if(e.key === "Enter"){
 
-  movieTitle.value = "";
+    getMovieName(e.target.value);
+
+    $("#movieTitle").val("");
+    return
+  }
+})
+
+
+
+$("#searchMovie").on("click", () => {
+
+  let movieTitle = $("#movieTitle");
+  console.log("salam");
+
+  getMovieName(movieTitle.val());
+
+  movieTitle.val("");
 });
 
 
-
-
 function renderMovie(movie){
-
-    moviePoster.src = movie.Poster
-    movieName.innerHTML = movie.Title
-    movieYear.innerHTML = movie.Year
-    movieAwards.innerHTML = movie.Awards == "N/A" ? "Yoxdur" : movie.Awards
-    movieRaiting.innerHTML = movie.Actors
-console.log("movie",movie);
+    moviePoster.attr("src",movie.Poster) 
+    movieName.html(movie.Title)
+    movieYear.html(movie.Year)
+    movieAwards.html(movie.Awards == "N/A" ? "Yoxdur" : movie.Awards)
+    movieRaiting.html(movie.Actors)
 }
+
+})
