@@ -6,7 +6,7 @@ $(document).ready(function () {
   });
 
 
-  $(document).on("click", "#hide", function () {
+  $(document).on("click", "#hidse", function () {
     let box = $("div");
 
     box.hide(2000);

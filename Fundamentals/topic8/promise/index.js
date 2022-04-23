@@ -160,4 +160,16 @@ try {
     throw new Error('Xetaolu')
   console.log(err);
 }
-ß
+
+// function otureceyimCallback(resolve,reject){
+
+//   if(car){
+//     resolve("Hersey bomba kimidi")
+//   }else{
+//     reject("Server")
+//   }
+
+// }
+
+// let a = new Promise(otureceyimCallback)
+
