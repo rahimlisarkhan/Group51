@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+
+    <title>Slider</title>
+
+    <style>
+      .next-button,
+      .prev-button {
+        background-color: black;
+        color: white;
+        padding: 10px;
+        position: absolute;
+        top: 40%;
+        border-radius: 50%;
+      }
+      .next-button {
+        right: 0;
+      }
+      .prev-button {
+        left: -70px;
+      }
+
+      .content {
+        width: 60%;
+        margin: 0 auto;
+        position: relative;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <div class="product-slider">
+        <div>
+          <div class="card mx-2" style="width: 18rem">
+            <img
+              src="https://images.samsung.com/is/image/samsung/ru-ur55-lu28r550uqixci-frontblack-205854114?$720_576_PNG$"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">HP 27f</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-warning">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="card mx-2" style="width: 18rem">
+            <img
+              src="https://images.samsung.com/is/image/samsung/ru-ur55-lu28r550uqixci-frontblack-205854114?$720_576_PNG$"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">HP 27f</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-warning">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="card mx-2" style="width: 18rem">
+            <img
+              src="https://images.samsung.com/is/image/samsung/ru-ur55-lu28r550uqixci-frontblack-205854114?$720_576_PNG$"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">HP 27f</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-warning">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="card mx-2" style="width: 18rem">
+            <img
+              src="https://images.samsung.com/is/image/samsung/ru-ur55-lu28r550uqixci-frontblack-205854114?$720_576_PNG$"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">HP 27f</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-warning">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="card mx-2" style="width: 18rem">
+            <img
+              src="https://images.samsung.com/is/image/samsung/ru-ur55-lu28r550uqixci-frontblack-205854114?$720_576_PNG$"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">HP 27f</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-warning">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="card mx-2" style="width: 18rem">
+            <img
+              src="https://images.samsung.com/is/image/samsung/ru-ur55-lu28r550uqixci-frontblack-205854114?$720_576_PNG$"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">HP 27f</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-warning">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="card mx-2" style="width: 18rem">
+            <img
+              src="https://images.samsung.com/is/image/samsung/ru-ur55-lu28r550uqixci-frontblack-205854114?$720_576_PNG$"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">HP 27f</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-warning">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="prev-button"><</div>
+      <div class="next-button">></div>
+    </div>
+
+    <!-- <input clas type="text"> -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <!-- <script
+    type="text/javascript"
+    src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/phone.min.js"
+  ></script> -->
+
+    <script src="./index.js"></script>
+  </body>
+</html>

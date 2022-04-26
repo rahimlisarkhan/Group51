@@ -16,19 +16,17 @@ function getSearchMovie(text) {
       return ikinciPromise;
     })
     .then(function (res2) {
-        renderMovie(res2)
+      renderMovie(res2);
     });
 }
 
+function renderMovie(data) {
+  document.querySelector(
+    "#resultSearch"
+  ).innerHTML = `Movie result: ${data.totalResults}`;
 
-function renderMovie(data){
-    document.querySelector(
-        "#resultSearch"
-      ).innerHTML = `Movie result: ${data.totalResults}`;
-
-      document.querySelector("#movieList").innerHTML = data.Search.map(
-        (item) => {
-          return `
+  document.querySelector("#movieList").innerHTML = data.Search.map((item) => {
+    return `
             <div class="card m-2" style="width: 18rem">
             <img
               src=${
@@ -49,6 +47,5 @@ function renderMovie(data){
           </div>
             
             `;
-        }
-      );
+  });
 }
