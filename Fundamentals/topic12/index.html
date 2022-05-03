@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+    <title>Home</title>
+  </head>
+
+  <body>
+    <header id="header position-sticky sticky-top">
+      <nav
+        class="navbar navbar-expand-lg navbar-light bg-info d-lg-flex justify-content-between"
+      >
+        <div class="logo">
+          <!-- <img class="logo-img" src="./src/image/logo.png" /> -->
+          <a class="navbar-brand text-white" href="#">Linkedin</a>
+        </div>
+
+        <!-- Mobile Menu Button Start -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Mobile Menu Button End -->
+
+        <div
+          class="collapse navbar-collapse d-lg-flex justify-content-lg-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item px-3 active">
+              <a class="nav-link nav-item-hover text-white" href="./index.html"
+                >Home <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item px-3">
+              <a class="nav-link nav-item-hover text-white" href="#">Blog</a>
+            </li>
+            <li class="nav-item px-3">
+              <button
+                type="button"
+                class="btn btn-outline-light"
+                data-toggle="modal"
+                data-target="#registerModal"
+              >
+                Register
+              </button>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home-dark" class="container">
+        <div class="jumbotron mt-5 text-center bg-transparent">
+          <h1 class="display-4 font-weight-bold">Posts</h1>
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              id="postTitle"
+              placeholder="Title"
+              aria-describedby="emailHelp"
+            />
+            <textarea
+              placeholder="Description"
+              class="form-control mt-4"
+              height="500"
+              id="postDesc"
+            >
+            </textarea>
+          </div>
+          <button type="button" id="addPostBtn" class="btn btn-info btn-block">
+            add post
+          </button>
+        </div>
+
+        <div class="d-flex flex-wrap" id="postList">
+          <!-- <div class="card m-4">
+            <img
+              src="https://cdn.dribbble.com/users/713533/screenshots/14158095/media/ae32d01dfc221a34aa5f3a2060a1e028.png?compress=1&resize=400x300"
+              class="card-img-top"
+              height="200"
+              id="moviePoster"
+              style="object-fit: cover"
+            />
+            <div class="card-body">
+              <h5 class="card-title" id="movieName">Post title</h5>
+              <p class="card-text" id="movieAwards">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel eum quibusdam explicabo quasi debitis, nesciunt maiores similique laboriosam excepturi illum laborum possimus sunt quo blanditiis illo ipsum adipisci odio qui.
+              </p>
+            </div>
+          </div> -->
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="jumbotron jumbotron-fluid m-0 bg-info text-white">
+        <div class="container">
+          <div class="d-flex flex-lg-row flex-column justify-content-between">
+            <h1 class="h4 font-weight-light mb-sm-5">Travolic</h1>
+            <div class="d-lg-flex">
+              <ul class="list-group list-group-flush mx-5">
+                <li class="list-group-item bg-transparent border-light">
+                  Contact
+                </li>
+                <li class="list-group-item bg-transparent border-light">
+                  A second item
+                </li>
+                <li class="list-group-item bg-transparent border-light">
+                  A third item
+                </li>
+                <li class="list-group-item bg-transparent border-light">
+                  And a fifth one
+                </li>
+              </ul>
+              <ul class="list-group list-group-flush mx-5">
+                <li class="list-group-item bg-transparent border-light">
+                  Contact
+                </li>
+                <li class="list-group-item bg-transparent border-light">
+                  A second item
+                </li>
+                <li class="list-group-item bg-transparent border-light">
+                  A third item
+                </li>
+                <li class="list-group-item bg-transparent border-light">
+                  And a fifth one
+                </li>
+              </ul>
+              <ul class="list-group list-group-flush mx-5">
+                <li class="list-group-item bg-transparent border-light">
+                  Contact
+                </li>
+                <li class="list-group-item bg-transparent border-light">
+                  A second item
+                </li>
+                <li class="list-group-item bg-transparent border-light">
+                  A third item
+                </li>
+                <li class="list-group-item bg-transparent border-light">
+                  And a fifth one
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Register for Modal -->
+    <div
+      class="modal fade"
+      id="registerModal"
+      data-backdrop="static"
+      data-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5
+              class="modal-title w-100 text-center text-dark"
+              id="staticBackdropLabel"
+            >
+              Register
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                />
+                <small id="emailHelp" class="form-text text-muted"
+                  >We'll never share your email with anyone else.</small
+                >
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="exampleInputPassword1"
+                />
+              </div>
+              <div class="form-group form-check">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="exampleCheck1"
+                />
+                <label class="form-check-label" for="exampleCheck1"
+                  >Check me out</label
+                >
+              </div>
+              <button type="submit" class="btn btn-outline-primary btn-block">
+                Sign in
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
