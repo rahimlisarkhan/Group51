@@ -32,7 +32,7 @@ let postData = {
 $(document).ready(function () {
   //   fetch("https://bloggy-api.herokuapp.com/posts/", {
   //     method: "GET",
-  //     headers: {
+  //     headers: {x
   //       Accept: "application/json",
   //       "Content-Type": "application/json",
   //     },
@@ -68,8 +68,35 @@ $(document).ready(function () {
 
 
 
+// const settings = {
+// 	"async": true,
+// 	"crossDomain": true,
+// 	"url": "https://weatherapi-com.p.rapidapi.com/history.json?q=Baku&dt=2022-05-05&lang=az",
+// 	"method": "GET",
+// 	"headers": {
+// 		"X-RapidAPI-Host": "weatherapi-com.p.rapidapi.com",
+// 		"X-RapidAPI-Key": "9d9588302emsh58804fa5a30d4d9p1b947ajsn659ea6ae2269"
+// 	}
+// };
 
+// $.ajax(settings).then(function (response) {
+// 	console.log(response);
+// });
 
+const settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "https://covid-193.p.rapidapi.com/statistics?country=Azerbaijan",
+  "method": "GET",
+  "headers": {
+    "X-RapidAPI-Host": "covid-193.p.rapidapi.com",
+    "X-RapidAPI-Key": "9d9588302emsh58804fa5a30d4d9p1b947ajsn659ea6ae2269"
+  }
+};
+
+$.ajax(settings).done(function (response) {
+  console.log(response);
+});
 
 
 
