@@ -4,7 +4,7 @@ class BoxList extends React.Component {
     
     return (
       <div className="row mt-5">
-          {/* {arr.map(item=> <Card />)} */}
+          {/* {arr.map(item=> <Card item={item} />)} */}
         <Card />
         <Card />
         <Card />

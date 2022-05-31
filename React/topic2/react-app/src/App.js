@@ -5,6 +5,7 @@ import flowerImage from "./image/helianthus-yellow-flower-pixabay_11863.jpeg"
 import data from "./data.json"
 import { Component1 } from "./components/Component1";
 
+
 class App extends React.Component {
   render() {
 
