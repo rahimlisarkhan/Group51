@@ -1,0 +1,8 @@
+{
+  "heros": [
+    { "name": "Superman", "power": 110 },
+    { "name": "Batman", "power": 118 },
+    { "name": "Ironman", "power": 115 },
+    { "name": "Tor", "power": 120 }
+  ]
+}
