@@ -10,9 +10,10 @@ import { Header } from "./components/Header";
 import { getProducts } from "./api/getProducts";
 
 export default class App extends Component {
-  render() {
-    let data = getProducts();
 
+  render() {
+    
+    let data = getProducts();
     let panel = true
 
     return (

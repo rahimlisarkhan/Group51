@@ -1,4 +1,6 @@
 import { Component } from "react";
+import { ChildComponentButton } from "./ChildComponentButton";
+import { View } from "./View";
 
 export class Counter extends Component {
   constructor() {
@@ -6,14 +8,19 @@ export class Counter extends Component {
 
     this.state = {
       counter: 0,
+      child: "",
     };
 
     this.increment = this.increment.bind(this);
     this.decrement = this.decrement.bind(this);
   }
 
-  increment() {
-    this.setState({ counter: this.state.counter + 1 });
+  increment(childdanGElir) {
+    console.log("childdanGElir", childdanGElir);
+
+    let newValue = this.state.counter;
+
+    this.setState({ counter: newValue + 1, child: childdanGElir });
   }
 
   decrement() {
@@ -26,14 +33,17 @@ export class Counter extends Component {
     return (
       <div>
         <button
-          disabled={this.state.counter === 0 ? true : false}
+          // disabled={this.state.counter === 0 ? true : false}
+          disabled={!this.state.counter}
           onClick={this.decrement}
         >
           azalt -
         </button>
         <h1>Count: {this.state.counter}</h1>
+        <View counter={this.state.counter} />
 
-        <button onClick={this.increment}>artir +</button>
+        <button onClick={()=>this.increment()}>artir +</button>
+        <ChildComponentButton artir={this.increment} />
       </div>
     );
   }
