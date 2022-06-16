@@ -1,5 +1,10 @@
 import React, { Component } from "react";
+import { Container } from "react-bootstrap";
 import "./App.css";
+import { BootCard } from "./BootCard";
+import { Card } from "./Card";
+import { CardBody } from "./Card/CardBody";
+import { CardTitle } from "./Card/CardTitle";
 // import { Child } from "./Child";
 
 class App extends Component {
@@ -27,7 +32,6 @@ class App extends Component {
     let name = this.fullnameRef.current.value;
     let age = this.ageRef.current.value;
     let password = this.passwordRef.current.value;
-
 
     if (!name) {
       this.setState({ isValid: { name: true } });
@@ -63,7 +67,18 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="App bg-danger">
+        <Container className="bg-warning">
+
+        <Card>
+          <CardBody>
+            <CardTitle paragraph="Lorem ipsum nebil ne">Monitor</CardTitle>
+          </CardBody>
+        </Card>
+
+        <BootCard/>
+
+
         {/* {this.state.isValid ? (
           <h1>Zehmet olmasa yoxlayin</h1>
         ) : (
@@ -90,6 +105,8 @@ class App extends Component {
           onComment={this.onPromise}
         /> */}
         {/* <button onClick={()=>onPromise("Rovshane")}> Deyis</button> */}
+        </Container>
+
       </div>
     );
   }

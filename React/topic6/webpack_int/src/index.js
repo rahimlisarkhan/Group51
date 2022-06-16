@@ -8,8 +8,9 @@ function Library() {
   const APP = `
     <div class="container">
         ${Header()}
+        ${Main()}
+        ${Footer()}
     </div>
-    
     `;
 
   // element.setAttribute("class","red")
