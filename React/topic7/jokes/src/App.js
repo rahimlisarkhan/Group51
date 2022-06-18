@@ -13,11 +13,11 @@ class App extends Component {
   render() {
     return (
       <>
-        {this.state.openPanel && <JokesContainer />};
+        {this.state.openPanel && <JokesContainer />}
         <button
           onClick={() => this.setState({ openPanel: !this.state.openPanel })}
         >
-          Show jokes
+          {this.state.openPanel ? "Close Jokes" : "Show Jokes"}
         </button>
       </>
     );

@@ -30,23 +30,27 @@ class App extends Component {
   //   // })
   // }
 
-  // shouldComponentUpdate(nextProps, nextState) {
+  shouldComponentUpdate(nextProps, nextState) {
 
-  //   if(this.state.count !==nextState.count){
-  //     return true
-  //   }
+    if(this.state.count !==nextState.count){
+      return true
+    }
 
-  //   if(this.props.color !==nextProps.color){
-  //     return true
-  //   }
+    if(this.props.color !==nextProps.color){
+      return true
+    }
 
-  // }
+  }
 
-  // componentWillUpdate(prevProps,prevState){
-  //   console.log("kohne olan state", this.state);
-  //   console.log("hal hazirdaki state", prevState);
+  componentWillUpdate(prevProps,prevState){
+    console.log("kohne olan state", this.state);
+    console.log("hal hazirdaki state", prevState);
 
-  // }
+  }
+
+  componentDidUpdate(){
+    console.log("Component update olundu...");
+  }
 
   render() {
     console.log("Render isledi");

@@ -9,27 +9,21 @@ export class JokesContainer extends Component {
     this.state = {
       jokes: null,
     };
+
+    this.updateJokesVote = this.updateJokesVote.bind(this);
   }
 
-  // shouldComponentUpdate(nextProps,nextState){
-
-  //   if(!this.state.jokes){
-
-  //     return true
-  //   }
-
-  // }
 
   // componentWillUnmount() {
   //   this.setState({ sayHello: false });
   //   console.log("Will umount");
   // }
 
-  shouldComponentUpdate() {
-    if (!this.state.jokes) {
-      return true;
-    }
-  }
+  // shouldComponentUpdate() {
+  //   if (!this.state.jokes) {
+  //     return true;
+  //   }
+  // }
 
   componentDidMount() {
     console.log("Compoennt yaradildi");
@@ -38,15 +32,31 @@ export class JokesContainer extends Component {
 
   getJokes() {
     axios
-      .get("https://icanhazdadjoke.com/search?limit=5", {
+      .get("https://icanhazdadjoke.com/search?limit=10", {
         headers: {
           Accept: "application/json",
         },
       })
       .then((res) => {
-        this.setState({ jokes: res.data.results });
+        let newData = res.data.results.map((item) => ({
+          ...item,
+          vote: 0,
+        }));
+
+        this.setState({ jokes: newData });
         console.log(res);
       });
+  }
+
+  updateJokesVote(jIndex, jVote) {
+    let oldJokes = [...this.state.jokes];
+
+    oldJokes[jIndex].vote = jVote;
+
+    oldJokes.sort((a, z) => z.vote - a.vote);
+
+    this.setState({ jokes: oldJokes });
+    console.log(this.state.jokes[jIndex]);
   }
 
   render() {
@@ -58,9 +68,13 @@ export class JokesContainer extends Component {
 
     return (
       <>
-        {this.state.sayHello && <h1>Welcome</h1>}
         {this.state.jokes?.map((item, index) => (
-          <JokesCard {...item} jokesIndex={index} />
+          <JokesCard
+            key={`jokes-id-i${item.id}`}
+            {...item}
+            jokesIndex={index}
+            updateJokesVote={this.updateJokesVote}
+          />
         ))}
       </>
     );

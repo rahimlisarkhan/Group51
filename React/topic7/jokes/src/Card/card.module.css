@@ -1,0 +1,22 @@
+
+
+.contentCenter {
+    display: flex !important;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.jokesCard{
+    background-color: rgb(233, 228, 140);
+    margin: 10px 0;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.jokesAvatar{
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 50%;
+    background-color: rgb(230, 199, 44);
+    text-transform: uppercase;
+}
