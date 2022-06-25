@@ -1,7 +1,7 @@
 import { Component, Fragment } from "react";
 import { Header } from "../Header/Header";
 import { Container } from "react-bootstrap";
-export class Layout extends Component {
+ class Layout extends Component {
   render() {
     return (
       <Fragment>
@@ -13,3 +13,6 @@ export class Layout extends Component {
     );
   }
 }
+
+
+export default Layout

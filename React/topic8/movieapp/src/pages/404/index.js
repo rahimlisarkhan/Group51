@@ -1,5 +1,4 @@
 import React from "react";
-import { withRouter } from "react-router-dom"
 
 
 
@@ -17,12 +16,12 @@ class Page404 extends React.Component{
        
         return (
             <>
-            <h1>Not Found 404 Page</h1>
-            <button onClick={this.onBack}>Go Back</button>
+            <h1 className="text-white">Not Found 404 Page</h1>
+            {/* <button onClick={this.onBack}>Go Back</button> */}
             </>
             )
     }
 }
 
 
-export default withRouter(Page404)
+export default Page404

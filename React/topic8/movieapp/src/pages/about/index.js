@@ -1,10 +1,10 @@
 import { Component } from "react";
 
-export class About extends Component{
+class About extends Component{
 
     render(){
         return(
-            <h1>About page</h1>
+            <h1 className="text-white">About page</h1>
         )
     }
 }

@@ -1,7 +1,7 @@
 import { Component } from "react";
 import { HomeContainer } from "../../feature/Home/HomeContainer";
 
-export class Home extends Component{
+class Home extends Component{
 
     render(){
         return(

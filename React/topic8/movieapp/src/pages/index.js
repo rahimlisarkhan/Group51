@@ -1,23 +1,31 @@
-import { Component, Fragment } from "react";
-import { Route, Routes } from "react-router-dom";
-import { Layout } from "../shared/components/Layout";
-import About from "./about";
-import Detailed from "./detailed";
-import Home from "./home";
+import { lazy } from "react";
+import { Component } from "react";
+import { Navigate, Route, Routes } from "react-router-dom";
 
-export class RootPage extends Component {
+//Compoennt
+const Home = lazy(() => import("./home"));
+const Page404 = lazy(() => import("./404"));
+const About = lazy(() => import("./about"));
+const Detailed = lazy(() => import("./detailed"));
+const Layout = lazy(() => import("../shared/components/Layout"));
+
+class RootPage extends Component {
   render() {
     return (
-      <Fragment>
         <Layout>
           <Routes>
             <Route path="/home" element={<Home />} />
+            <Route path="/" element={<Navigate to="/home" replace />} />
+
             <Route path="/movie/slug=:movie_slug" element={<Detailed />} />
+            <Route path="/movie" element={<Navigate to="/home" replace />} />
 
             <Route path="/about" element={<About />} />
+            <Route path="*" element={<Page404 />} />
           </Routes>
         </Layout>
-      </Fragment>
     );
   }
 }
+
+export default RootPage;

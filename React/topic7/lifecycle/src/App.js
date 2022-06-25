@@ -9,7 +9,6 @@ class App extends Component {
 
     this.state = {
       count: 0,
-      oldCount: null,
       isShowPanel: false,
     };
   }
@@ -58,7 +57,6 @@ class App extends Component {
     return (
       <div className="App">
         {this.state.isShowPanel && <PlayerContent />}
-        {/* <h1>Sizin kohne bu {this.state.oldCount} deyer idi deyisildi bu {this.state.count} oldu</h1> */}
         <h1>Component {this.state.count}</h1>
         <button
           onClick={() =>

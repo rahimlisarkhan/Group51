@@ -4,9 +4,7 @@ import { withUserAccess } from "./shared/hoc/withUserAccess";
 
 class MenimComponentim1 extends Component {
   
-  
     render() {
-
     console.log("component1", this.props);
     return (
       <div>

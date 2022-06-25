@@ -1,13 +1,19 @@
 import "./style/App.css";
-import React from "react";
-import { RootPage } from "./pages";
+import React, { Component, Suspense} from "react";
+import RootPage  from "./pages";
+import { BrowserRouter as Router } from "react-router-dom";
 
-function App() {
-  return (
-    <React.StrictMode>
-      <RootPage/>
-    </React.StrictMode>
-  );
+
+class App extends Component {
+  render() {
+    return (
+      <Router>
+        <Suspense fallback={<h1 className="text-white">Loading....</h1>}>
+          <RootPage />
+        </Suspense>
+      </Router>
+    );
+  }
 }
 
 export default App;

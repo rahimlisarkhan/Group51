@@ -8,7 +8,9 @@ export class Header extends Component {
       <header>
         <Navbar bg="dark" variant="dark">
           <Container>
-            <Navbar.Brand href="#home">Filmalisa</Navbar.Brand>
+            <Link to="/home" className="nav-link">
+              <Navbar.Brand >Filmalisa</Navbar.Brand>
+            </Link>
             <Nav className="me-auto">
               <Link to="/home" className="nav-link">
                 Home

@@ -4,7 +4,6 @@ import  MenimComponentim1  from "./MenimComponentim1";
 import  MenimComponentim2 from "./MenimComponentim2";
 
 
-
 class App extends Component {
 
   render() {
