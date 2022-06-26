@@ -2,6 +2,7 @@ import React from "react";
 import { Row, Col } from "react-bootstrap";
 import { CardItem as Card } from "../components/Card";
 import axios from "axios";
+import { moviesAPI } from "../../../api/home";
 
 export class HomeContainer extends React.Component {
   constructor(props) {
@@ -16,12 +17,10 @@ export class HomeContainer extends React.Component {
   }
 
   getMovies() {
-    axios
-      .get("http://www.omdbapi.com/?apikey=a407a7b3&s=series")
-      .then(({ data: { Search } }) => {
-        console.log(Search);
-        this.setState({ movies: Search });
-      });
+    moviesAPI.then(({ data: { Search } }) => {
+      console.log(Search);
+      this.setState({ movies: Search });
+    });
   }
 
   render() {
