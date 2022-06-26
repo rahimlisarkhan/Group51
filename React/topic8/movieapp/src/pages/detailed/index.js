@@ -1,12 +1,31 @@
-import { Component } from "react";
+import { useMatch, useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import { movieAPI } from "../../api/detailed";
 
-class Detailed extends Component{
+const Detailed = () => {
+  const { slug } = useParams();
+  const [movie, setMovie] = useState(null);
 
-    render(){
-        return(
-            <h1 className="text-white">Detailed</h1>
-        )
-    }
-}
+  console.log(slug);
+  console.log(movie);
+  //   console.log(match);
 
-export default Detailed
+  useEffect(() => {
+    getMovie(slug);
+  }, []);
+
+  const getMovie = (title) => {
+    movieAPI(title).then(({ data }) => {
+      setMovie(data);
+    });
+  };
+
+  if (!movie) {
+    return <div className="display-1 text-white">Loading...</div>;
+  }
+
+  return <h1 className="text-white">Detailed</h1>;
+};
+
+export default Detailed;

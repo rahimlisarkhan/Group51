@@ -1,27 +1,18 @@
-import React from "react";
+import { useNavigate } from "react-router-dom";
 
+const Page404 = () => {
+    const navigate = useNavigate()
 
+  const onBack = () => {
+    navigate("/home")
+  };
 
-class Page404 extends React.Component{
-    constructor(){
-        super()
-        this.onBack = this.onBack.bind(this)
-    }
-    
-    onBack = () =>{
-        this.props.history.goBack();
-    }
+  return (
+    <>
+      <h1 className="text-white">Not Found 404 Page</h1>
+      <button className="btn btn-warning" onClick={onBack}>Go Back</button>
+    </>
+  );
+};
 
-    render() {
-       
-        return (
-            <>
-            <h1 className="text-white">Not Found 404 Page</h1>
-            {/* <button onClick={this.onBack}>Go Back</button> */}
-            </>
-            )
-    }
-}
-
-
-export default Page404
+export default Page404;

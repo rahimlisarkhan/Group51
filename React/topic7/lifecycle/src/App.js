@@ -4,6 +4,7 @@ import { PlayerContent } from "./PlayerContent";
 import "./style/App.css";
 
 class App extends Component {
+  pi = 3.14
   constructor(props) {
     super(props);
 
@@ -29,6 +30,7 @@ class App extends Component {
   //   // })
   // }
 
+
   shouldComponentUpdate(nextProps, nextState) {
 
     if(this.state.count !==nextState.count){
@@ -50,6 +52,9 @@ class App extends Component {
   componentDidUpdate(){
     console.log("Component update olundu...");
   }
+
+  
+
 
   render() {
     console.log("Render isledi");

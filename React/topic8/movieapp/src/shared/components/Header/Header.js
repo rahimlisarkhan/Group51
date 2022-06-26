@@ -1,30 +1,28 @@
 import { Component } from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
-export class Header extends Component {
-  render() {
-    return (
-      <header>
-        <Navbar bg="dark" variant="dark">
-          <Container>
+export const Header = () => {
+  const navigate = useNavigate();
+
+  return (
+    <header>
+      <Navbar bg="dark" variant="dark">
+        <Container>
+          <Navbar.Brand onClick={() => navigate("/")}>Filmalisa</Navbar.Brand>
+          <Nav className="me-auto">
             <Link to="/home" className="nav-link">
-              <Navbar.Brand >Filmalisa</Navbar.Brand>
+              Home
             </Link>
-            <Nav className="me-auto">
-              <Link to="/home" className="nav-link">
-                Home
-              </Link>
-              <Link to="/about" className="nav-link">
-                About
-              </Link>
-              <Link to="/blog" className="nav-link">
-                Blog
-              </Link>
-            </Nav>
-          </Container>
-        </Navbar>
-      </header>
-    );
-  }
-}
+            <Link to="/about" className="nav-link">
+              About
+            </Link>
+            <Link to="/blog" className="nav-link">
+              Blog
+            </Link>
+          </Nav>
+        </Container>
+      </Navbar>
+    </header>
+  );
+};

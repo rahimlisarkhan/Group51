@@ -17,7 +17,7 @@ class RootPage extends Component {
             <Route path="/home" element={<Home />} />
             <Route path="/" element={<Navigate to="/home" replace />} />
 
-            <Route path="/movie/slug=:movie_slug" element={<Detailed />} />
+            <Route path="/movie/slug=:slug" element={<Detailed />} />
             <Route path="/movie" element={<Navigate to="/home" replace />} />
 
             <Route path="/about" element={<About />} />
