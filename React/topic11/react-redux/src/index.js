@@ -1,19 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
-import { GlobalStoreProvider } from "./provider/GlobalStoreProvider";
 import { BrowserRouter as Router } from "react-router-dom";
-import { ModalProvider } from "./provider/ModalProvider";
+import { Provider } from "react-redux"
+import { store } from "./store";
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+
 root.render(
-  <ModalProvider>
     <Router>
-      <GlobalStoreProvider>
+      <Provider store={store}>
         <React.StrictMode>
           <App />
         </React.StrictMode>
-      </GlobalStoreProvider>
+      </Provider>
     </Router>
-  </ModalProvider>
 );
