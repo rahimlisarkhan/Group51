@@ -1,33 +1,33 @@
 import axios from "axios";
 import { useEffect } from "react";
 import { connect, useSelector, useDispatch, batch } from "react-redux";
-import { fillMovies, setArtir } from "../store/action/home";
+import { fillMovies, setArtir,setIncrement } from "../store/action/home";
 
 const HomePage = (props) => {
   console.log("props", props);
 
   useEffect(() => {
     // movies.length === 0 && getMovie();
-    !props.movies.length && getMovie();
+    !props.movies.length && props.setDispatchFillMovies();
   }, []);
 
-  const getMovie = () => {
-    axios
-      .get("http://www.omdbapi.com/?apikey=a407a7b3&s=series")
-      .then((res) => {
-        props.dispatch(fillMovies(res.data.Search));
-        // setMovies(res.data.Search);
-        // globalDispatch({ type: FILL_MOVIES, payload: res.data.Search });
-      });
-  };
+
 
   return (
     <>
       <h1>Home page.</h1>
       <button
         onClick={() => {
-          console.log(setArtir(5));
-          props.dispatch(setArtir(5));
+          // console.log(setArtir(5));
+          // props.dispatch(setIncrement());
+
+          batch(()=>{
+
+            props.setDispatchArtir(20)
+            props.setDispatchIncrement()
+
+          })
+
         }}
       >
         ARTIR
@@ -59,12 +59,15 @@ const HomePage = (props) => {
 
 const mapStateToProps = (state) => ({
   product_price: state.home.price,
+  product_count: state.home.count,
   movies: state.home.movies,
   product_categories: state.categories.sub_category,
 });
 
-// const mapDispatchtoProps = ()=>{
+const mapDispatchtoProps = (dispatch)=>({
+  setDispatchArtir: (num) => dispatch(setArtir(num)),
+  setDispatchIncrement: () => dispatch(setIncrement()),
+  setDispatchFillMovies: ()=> dispatch(fillMovies())
+})
 
-// }
-
-export default connect(mapStateToProps)(HomePage);
+export default connect(mapStateToProps,mapDispatchtoProps)(HomePage);

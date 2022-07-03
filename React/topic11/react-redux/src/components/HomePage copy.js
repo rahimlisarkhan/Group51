@@ -13,7 +13,7 @@ const HomePage = (props) => {
   console.log("product_price", product_price);
 
   useEffect(() => {
-    // movies.length === 0 && getMovie();
+    // movies.length === 0 && dispatch(fillMovies());
   }, []);
 
   const getMovie = () => {

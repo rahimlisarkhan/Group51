@@ -1,0 +1,40 @@
+{
+  "groups": [
+    {
+      "name": "Meni sevdiklerim 1",
+      "colors": [
+        {
+          "name": "red-light",
+          "color_code": "#dhsda32"
+        },
+        {
+          "name": "Meni sevdiklerim 1",
+          "colors": [
+            {
+              "name": "red-light",
+              "color_code": "#dhsda32"
+            }
+          ]
+        }
+      ]
+    },
+    {
+        "name": "Meni sevdiklerim dark",
+        "colors": [
+          {
+            "name": "dark-light",
+            "color_code": "#dhsda32"
+          },
+          {
+            "name": "Meni sevdiklerim 1",
+            "colors": [
+              {
+                "name": "dark-red-light",
+                "color_code": "#dhsda32"
+              }
+            ]
+          }
+        ]
+      }
+  ]
+}

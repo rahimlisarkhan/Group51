@@ -5,6 +5,7 @@ import * as types from "../types/home";
 let initialState = {
   price: 0,
   movies: [],
+  count: 0,
 };
 
 export const homeReducer = (state = initialState, action) => {
@@ -15,11 +16,12 @@ export const homeReducer = (state = initialState, action) => {
     case types.FILL_MOVIES:
       return { ...state, movies: action.payload };
 
+    case types.INCREMENT:
+      return { ...state, count: state.count + 1 };
+
     default:
       return state;
   }
 };
 
-
 export const stateMovieLength = (state) => state.home.movies.length;
-

@@ -12,7 +12,7 @@ import {
 const appContext = createContext({});
 
 const initState = {
-  count: 5,
+  count: 0,
   isShowPanel: false,
   movies: [],
   user: {
@@ -25,7 +25,7 @@ const initState = {
 const reducer = (state, action) => {
   switch (action.type) {
     case SET_COUNT:
-      return { ...state, count: action.payload };
+      return { ...state, count: state.count + 1 };
 
     case SHOW_PANEL:
       return { ...state, isShowPanel: !state.isShowPanel };
