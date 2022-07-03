@@ -1,0 +1,18 @@
+.fav{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    z-index: 999;
+    cursor: pointer;
+    transition: all .2s;
+
+}
+.fav:hover{
+transform: scale(.95);
+}
+
+
+.fav svg{
+    font-size: 35px;
+    fill: orange;
+}

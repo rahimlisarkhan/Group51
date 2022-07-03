@@ -1,7 +1,6 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
 import { CardItem as Card } from "../components/Card";
-import axios from "axios";
 import { moviesAPI } from "../../../api/home";
 
 export class HomeContainer extends React.Component {
@@ -25,7 +24,7 @@ export class HomeContainer extends React.Component {
 
   render() {
     return (
-      <Row container spacing={1}>
+      <Row container={true} spacing={1}>
         {this.state.movies.map((movie) => (
           <Col key={movie.imdbID}>
             <Card {...movie} />

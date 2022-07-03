@@ -1,5 +1,5 @@
 import { Component, Fragment } from "react";
-import { Header } from "../Header/Header";
+import { Header } from "../../containers/FavModal/Header/Header";
 import { Container } from "react-bootstrap";
  class Layout extends Component {
   render() {

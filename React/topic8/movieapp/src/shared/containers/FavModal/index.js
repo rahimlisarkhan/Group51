@@ -1,0 +1,1 @@
+export { FavModal } from "./FavModal"
