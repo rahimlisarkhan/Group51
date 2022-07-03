@@ -1,7 +1,14 @@
+import styles from "./Detailed.module.css";
+
 export const Content = (props) => {
   return (
-    <div className="container">
-      <div className="row flex">
+    <div style={{position:"relative", height:"100vh"}}>
+      <div className={styles.contentOverlay}>
+        <img src={props.Poster} />
+        <div className={styles.imgOverlay}></div>
+      </div>
+
+      <div className="row flex" style={{position:"absolute", top:"150px", zIndex:2}}>
         <div className="col-5  mt-5">
           <img
             src={props.Poster}
@@ -12,7 +19,10 @@ export const Content = (props) => {
           />
         </div>
         <div className="col-7  mt-5">
-          <h1 className=" display-5 text-light">{props.Title} <span className="h2 badge text-warning" >{props.imdbRating}</span></h1>
+          <h1 className=" display-5 text-light">
+            {props.Title}{" "}
+            <span className="h2 badge text-warning">{props.imdbRating}</span>
+          </h1>
           <div className="h5 text-light">Genre: {props.Genre}</div>
           <div className="h5 text-light">Year: {props.Year}</div>
           <div className="h5 text-light">Time: {props.Runtime}</div>
