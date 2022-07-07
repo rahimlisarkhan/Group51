@@ -21,7 +21,25 @@ export const CardItem = (props) => {
   const handleFav = () => {
     setShowFav((prev) => !prev);
     dispatch(favMovie(props));
+
+    getWriteStore();
   };
+
+  const getWriteStore = () => {
+    let array = JSON.parse(localStorage.getItem("favorite"));
+    console.log("array", array);
+
+    const isFind = array.find((item) => item.imdbID === imdbID);
+
+    if (!isFind) {
+      array = array ? [...array, props] : [props];
+      return;
+    }
+    array = array.filter((item) => item.imdbID !== imdbID);
+
+    localStorage.setItem("favorite", JSON.stringify(array));
+  };
+
   return (
     <Card
       style={{

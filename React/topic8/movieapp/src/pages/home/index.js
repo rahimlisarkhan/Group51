@@ -1,11 +1,11 @@
 import { Component } from "react";
-import { HomeContainer } from "../../feature/Home/HomeContainer";
+import { Home as Content } from "../../feature/Home/containers/Home";
 
 class Home extends Component{
 
     render(){
         return(
-            <HomeContainer/>
+            <Content/>
         )
     }
 }

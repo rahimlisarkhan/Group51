@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   value: 0,
   movies: [],
-  favorite_movies: [],
+  favorite_movies: JSON.parse(localStorage.getItem("favorite")) ?? [],
 };
 
 export const homeSlice = createSlice({

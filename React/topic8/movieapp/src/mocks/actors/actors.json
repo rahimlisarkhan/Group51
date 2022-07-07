@@ -1,0 +1,18 @@
+[
+  {
+    "id":112,
+    "name": "Brad",
+    "surname": "Bitt",
+    "age": 44,
+    "image_url": "https://m.media-amazon.com/images/M/MV5BMjA1MjE2MTQ2MV5BMl5BanBnXkFtZTcwMjE5MDY0Nw@@._V1_.jpg",
+    "movies": ["Home alone", "Vampire"]
+  },
+  {
+    "id":152,
+    "name": "Silvestre",
+    "surname": "Stalone",
+    "age": 71,
+    "image_url": "https://cryptopotato.com/wp-content/uploads/2022/03/180614-sylvester-stallone-al-0833.jpg",
+    "movies": ["Rambo", "Rocky"]
+  }
+]

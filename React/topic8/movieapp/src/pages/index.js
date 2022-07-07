@@ -6,6 +6,7 @@ import { Navigate, Route, Routes } from "react-router-dom";
 const Home = lazy(() => import("./home"));
 const Page404 = lazy(() => import("./404"));
 const About = lazy(() => import("./about"));
+const Blog = lazy(() => import("./blog"));
 const Detailed = lazy(() => import("./detailed"));
 const Layout = lazy(() => import("../shared/components/Layout"));
 
@@ -21,6 +22,7 @@ class RootPage extends Component {
             <Route path="/movie" element={<Navigate to="/home" replace />} />
 
             <Route path="/about" element={<About />} />
+            <Route path="/blog" element={<Blog />} />
             <Route path="*" element={<Page404 />} />
           </Routes>
         </Layout>

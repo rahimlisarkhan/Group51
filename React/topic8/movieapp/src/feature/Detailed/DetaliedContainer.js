@@ -1,6 +1,9 @@
+import { Rating } from "@mui/material";
 import styles from "./Detailed.module.css";
 
 export const Content = (props) => {
+
+  console.log("props",props);
   return (
     <div style={{position:"relative", height:"100vh"}}>
       <div className={styles.contentOverlay}>
@@ -30,6 +33,7 @@ export const Content = (props) => {
           <div className="h5 text-light">Language: {props.Language}</div>
           <div className="h5 text-light">Country: {props.Country}</div>
           <div className="h6 text-light">Plot: {props.Plot}</div>
+          <Rating name="half-rating" defaultValue={4.5} precision={0.5} readOnly/>
         </div>
       </div>
     </div>
