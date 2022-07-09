@@ -29,6 +29,9 @@ export const Header = () => {
             <Link to="/blog" className="nav-link">
               Blog
             </Link>
+            <Link to="/contact" className="nav-link">
+              Contact
+            </Link>
 
           </Nav>
           <Avatar variant="rounded" sx={{ width: 44, height: 44 }} 

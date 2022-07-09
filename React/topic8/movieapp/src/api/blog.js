@@ -31,6 +31,12 @@ AxiosMockCreate.onDelete(/\/actors\/\d+/).reply((config) => {
   });
 });
 
+
+
+
+
+
+
 export const actorsAPI = Axios.get("/actors");
 export const actorsDeleteAPI = (id) => Axios.delete(`/actors/${id}`);
 export const actorsCreateAPI = (item) => Axios.post(`/actors`, item);

@@ -36,14 +36,14 @@ let randomFormat = "DD-MM-YYYY"
 // console.log(diffYear);
 
 
-var indikiTarix = moment();
+// var indikiTarix = moment();
 
 
-var kecmisTarix = moment("16-05-2022", "DD-MM-YYYY");
+// var kecmisTarix = moment("16-05-2022", "DD-MM-YYYY");
 
-let ferq = indikiTarix.diff(kecmisTarix,"hours")
+// let ferq = indikiTarix.diff(kecmisTarix,"hours")
 
-console.log(ferq);
+// console.log(ferq);
 // // a.diff(b, 'years'); // 1
 
 // let illerArasindakiFerq = indikiTarix.diff(kecmisTarix, 'months'); // 24 ay
