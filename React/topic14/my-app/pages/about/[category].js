@@ -4,15 +4,12 @@ import useSWR from "swr";
 import { getJokes } from "../../api/jokes";
 import { useRouter } from "next/router";
 
-const AboutPage = () => {
-  const { data } = useSWR(
-    "https://icanhazdadjoke.com/search?limit=5",
-    getJokes
-  );
+const CategoryPage = () => {
+
 
   const route = useRouter();
 
-  const { rest, category } = route.query;
+  const { category } = route.query;
 
   console.log("route", route);
 
@@ -30,22 +27,16 @@ const AboutPage = () => {
   return (
     <>
       <Head>
-        <title> About App </title>
+        <title> Category App </title>
       </Head>
      <div>
       <h2>Category</h2>
-
-      <ul>
-          <li onClick={()=>route.push("about")}>All</li>
-          <li onClick={()=>route.replace("?rest=burgerking&category=meat")}>Meat</li>
-          <li onClick={()=>route.replace("?rest=burgerking&category=fish")}>Fish</li>
-      </ul>
+        {renderRestuarant()}
      </div>
 
-      <h1>About page</h1>;{renderRestuarant()}
       
     </>
   );
 };
 
-export default AboutPage;
+export default CategoryPage;

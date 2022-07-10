@@ -1,0 +1,1 @@
+export { FavCard } from "./FavCard"
