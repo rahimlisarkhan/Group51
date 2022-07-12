@@ -3,26 +3,28 @@ import { Card } from "react-bootstrap";
 import { useRouter } from "next/router";
 
 import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
-// import { useSelector, useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 
 import styles from "./Card.module.css";
 import { useState } from "react";
 import { Button } from "@mui/material";
-// import { favMovie } from "../../../../store/slices/homeSlice";
+import { favMovie } from "../../../../store/slices/homeSlice";
+
 
 export const CardItem = (props) => {
   const { Poster, Title, Type, Year, imdbID } = props;
+  const { push } = useRouter()
 
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
-  // const favoriteItem = useSelector((state) => state.home.favorite_movies);
-  // const isFind = favoriteItem.find((item) => item.imdbID === imdbID);
+  const favoriteItems = useSelector((state) => state.home.favorite_movies);
+  const isFind = favoriteItems.find((item) => item.imdbID === imdbID);
 
-  const [showFav, setShowFav] = useState(false);
+  const [showFav, setShowFav] = useState(!!isFind);
 
   const handleFav = () => {
     setShowFav((prev) => !prev);
-    // dispatch(favMovie(props));
+    dispatch(favMovie(props));
 
     // getWriteStore();
   };
@@ -64,7 +66,7 @@ export const CardItem = (props) => {
         <Card.Title>{Title}</Card.Title>
         <Card.Text>{Type}</Card.Text>
         <Card.Text>{Year}</Card.Text>
-        <button className="btn btn-warning w-100" onClick={() => {}}>
+        <button className="btn btn-warning w-100" onClick={() => push(`/movie/${Title}`)}>
           Watch
         </button>
       </Card.Body>

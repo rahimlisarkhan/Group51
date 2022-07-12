@@ -7,7 +7,7 @@ export const Content = (props) => {
   return (
     <div style={{position:"relative", height:"100vh"}}>
       <div className={styles.contentOverlay}>
-        <img src={props.Poster} />
+        <img src={props.Poster} alt={props.Title} />
         <div className={styles.imgOverlay}></div>
       </div>
 
@@ -27,11 +27,11 @@ export const Content = (props) => {
             <span className="h2 badge text-warning">{props.imdbRating}</span>
           </h1>
           <div className="h5 text-light">Genre: {props.Genre}</div>
-          <div className="h5 text-light">Year: {props.Year}</div>
-          <div className="h5 text-light">Time: {props.Runtime}</div>
-          <div className="h5 text-light">Actors: {props.Actors}</div>
-          <div className="h5 text-light">Language: {props.Language}</div>
-          <div className="h5 text-light">Country: {props.Country}</div>
+          <h2 className="h5 text-light">Year: {props.Year}</h2>
+          <h3 className="h5 text-light">Time: {props.Runtime}</h3>
+          <h4 className="h5 text-light">Actors: {props.Actors}</h4>
+          <h5 className="h5 text-light">Language: {props.Language}</h5>
+          <h6 className="h5 text-light">Country: {props.Country}</h6>
           <div className="h6 text-light">Plot: {props.Plot}</div>
           <Rating name="half-rating" defaultValue={4.5} precision={0.5} readOnly/>
         </div>

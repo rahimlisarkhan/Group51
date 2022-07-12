@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { createContext } from "react";
-import { FavModal } from "../shared/containers/FavModal/FavModal";
+import { FavModal }from "../shared/containers/FavModal"
 
 export const modalContext = createContext({});
 

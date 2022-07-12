@@ -11,7 +11,7 @@ export const FavCard = (props) => {
     <Card
       onClick={() => {
         props.handleClose();
-        push(`/movie/slug=${Title}`);
+        push(`/movie/${Title}`);
       }}
       style={{
         width: "15rem",
